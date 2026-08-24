@@ -14,27 +14,37 @@ normal location and land in version control automatically.
 
 ## Setup on a new machine
 
+Requires `git`, `curl`, `sudo`, and `ca-certificates`. On a minimal system:
+
+```bash
+sudo apt-get update && sudo apt-get install -y git curl sudo ca-certificates
+```
+
+Then:
+
 ```bash
 git clone git@github.com:gmartoranajr/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
 ```
 
+`install.sh` is idempotent and backs up any existing file to
+`~/.dotfiles-backup/<timestamp>/` before replacing it. Tested on a clean
+Ubuntu container.
+
+
 ## Tooling
 
-Standard utilities are aliased to modern replacements:
+Modern CLI tools are installed but deliberately **not** aliased over the
+standard commands, so `ls`, `cat`, `find`, and `df` behave the same here as
+they do on a remote server.
 
-| Command | Runs | Why |
-|---------|------|-----|
-| `ls` | eza | Icons, git status, tree mode |
-| `cat` | bat | Syntax highlighting |
-| `fd` | fdfind | Faster, saner syntax than find |
-| `df` | duf | Readable disk usage |
-
-Also installed: ripgrep, fzf, zoxide, btop, ncdu, tealdeer.
+Available under their own names: `eza`, `batcat` (aliased to `bat`),
+`fdfind`, `duf`, `ripgrep`, `fzf`, `zoxide`, `btop`, `ncdu`, `tealdeer`.
 
 Prompt is [starship](https://starship.rs). Terminal font is Hack Nerd Font,
-required for the glyphs used by starship and eza.
+required for the glyphs starship uses.
+
 
 ## Machine-specific config
 

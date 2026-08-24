@@ -7,3 +7,4 @@ known_hosts
 authorized_keys
 .env
 *_history
+config.local

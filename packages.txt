@@ -1,0 +1,22 @@
+# core
+git
+curl
+wget
+unzip
+fontconfig
+
+# modern CLI replacements referenced by bashrc aliases
+eza
+bat
+ripgrep
+fd-find
+zoxide
+fzf
+
+# system inspection
+btop
+duf
+ncdu
+
+# docs
+tealdeer

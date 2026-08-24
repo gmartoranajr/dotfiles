@@ -129,4 +129,6 @@ alias t='ssh tower'
 # ---- tools ----
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
-eval "$(starship init bash)"
+
+# Created by `pipx` on 2026-08-24 20:10:09
+export PATH="$PATH:/home/gmartorana/.local/bin"

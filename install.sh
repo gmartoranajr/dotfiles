@@ -58,6 +58,7 @@ if [[ ! -d "$FONT_DIR" ]]; then
     trap 'rm -rf "$tmp"' EXIT
     curl -fsSL -o "$tmp/Hack.zip" \
         "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip"
+     mkdir -p "$FONT_DIR"
     unzip -qo "$tmp/Hack.zip" -d "$FONT_DIR"
     fc-cache -f
 else

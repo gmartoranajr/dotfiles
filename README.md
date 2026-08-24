@@ -42,9 +42,6 @@ they do on a remote server.
 Available under their own names: `eza`, `batcat` (aliased to `bat`),
 `fdfind`, `duf`, `ripgrep`, `fzf`, `zoxide`, `btop`, `ncdu`, `tealdeer`.
 
-Prompt is [starship](https://starship.rs). Terminal font is Hack Nerd Font,
-required for the glyphs starship uses.
-
 
 ## Machine-specific config
 

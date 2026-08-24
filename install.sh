@@ -44,25 +44,5 @@ if [[ -f "$DOTFILES/packages.txt" ]]; then
     sudo apt-get install -y "${pkgs[@]}"
 fi
 
-if ! command -v starship >/dev/null 2>&1; then
-    info "installing starship"
-    curl -sS https://starship.rs/install.sh | sh
-else
-    info "starship already installed"
-fi
-
-FONT_DIR="$HOME/.local/share/fonts/Hack"
-if [[ ! -d "$FONT_DIR" ]]; then
-    info "installing Hack Nerd Font"
-    tmp="$(mktemp -d)"
-    trap 'rm -rf "$tmp"' EXIT
-    curl -fsSL -o "$tmp/Hack.zip" \
-        "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip"
-     mkdir -p "$FONT_DIR"
-    unzip -qo "$tmp/Hack.zip" -d "$FONT_DIR"
-    fc-cache -f
-else
-    info "Hack Nerd Font already installed"
-fi
 
 info "done. open a new terminal, or run: source ~/.bashrc"

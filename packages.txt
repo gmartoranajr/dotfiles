@@ -2,8 +2,6 @@
 git
 curl
 wget
-unzip
-fontconfig
 
 # modern CLI replacements referenced by bashrc aliases
 eza

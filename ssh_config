@@ -1,7 +1,5 @@
 Host tower
     HostName 10.0.0.169
-    User gmartorana
 
 Host tower-ts
     HostName 100.105.31.21
-    User gmartorana

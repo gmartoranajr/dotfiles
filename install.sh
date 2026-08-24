@@ -40,8 +40,8 @@ chmod 600 "$HOME/.ssh/config.local"
 if [[ -f "$DOTFILES/packages.txt" ]]; then
     info "installing apt packages"
     mapfile -t pkgs < <(grep -vE '^\s*(#|$)' "$DOTFILES/packages.txt")
-    sudo apt-get update
-    sudo apt-get install -y "${pkgs[@]}"
+    sudo DEBIAN_FRONTEND=noninteractive apt-get update
+    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y "${pkgs[@]}"
 fi
 
 

@@ -1,0 +1,9 @@
+# never commit these
+*id_ed25519
+*id_rsa
+*.pem
+*.key
+known_hosts
+authorized_keys
+.env
+*_history

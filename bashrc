@@ -135,3 +135,4 @@ alias t='ssh tower'
 # ---- tools ----
 eval "$(zoxide init bash)"
 eval "$(fzf --bash)"
+eval "$(starship init bash)"

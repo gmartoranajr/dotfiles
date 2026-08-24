@@ -117,14 +117,7 @@ if ! shopt -oq posix; then
   fi
 fi
 # ---- modern replacements ----
-alias ls='eza --icons --group-directories-first'
-alias ll='eza -l --icons --git --group-directories-first'
-alias la='eza -la --icons --git --group-directories-first'
-alias lt='eza --tree --level=2 --icons'
-alias cat='batcat --style=plain --paging=never'
 alias bat='batcat'
-alias fd='fdfind'
-alias df='duf'
 
 # ---- navigation ----
 alias ..='cd ..'

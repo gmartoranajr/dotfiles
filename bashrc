@@ -127,8 +127,14 @@ alias ...='cd ../..'
 alias t='ssh tower'
 
 # ---- tools ----
-eval "$(zoxide init bash)"
-eval "$(fzf --bash)"
+# Guarded so a machine without these tools does not throw an error in every
+# new shell. The same bashrc gets linked onto boxes that never ran install.sh.
+command -v zoxide >/dev/null && eval "$(zoxide init bash)"
+command -v fzf    >/dev/null && eval "$(fzf --bash)"
 
-# Created by `pipx` on 2026-08-24 20:10:09
-export PATH="$PATH:/home/gmartorana/.local/bin"
+# pipx installs here. $HOME rather than a hardcoded username so this works on
+# any machine, which is the whole point of the repo.
+export PATH="$PATH:$HOME/.local/bin"
+
+# Never let the guarded evals above leave a nonzero $? sitting in the prompt.
+true
